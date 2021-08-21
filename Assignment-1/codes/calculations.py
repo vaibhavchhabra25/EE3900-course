@@ -1,14 +1,14 @@
 import numpy as np
 
-A = numpy.array([4,8,10])
-B = numpy.array([6,10,-8])
+A = np.array([4,8,10])
+B = np.array([6,10,-8])
 
 # For YZ plane
-n = numpy.array([1,0,0])
+n = np.array([1,0,0])
 d = 0
 
 # ratio 
-k = (d-np.dot(np.transpose(n),A))/(np.dot(np.transpose(n),B)-d)
+k = (d-n.T@A)/(n.T@B-d)
 print('k =',k)
 
 # point of intersection
