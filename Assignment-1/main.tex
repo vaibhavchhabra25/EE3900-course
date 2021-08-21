@@ -143,29 +143,36 @@ and latex-tikz codes from
 (Vectors-2.19) Find the ratio in which the line segment joining the points $\myvec{4\\8\\10}$ and $\myvec{6\\10\\-8}$ is divided by the YZ plane.
 \section{Solution}
 Let $\vec{A} = \myvec{4\\8\\10}$ and $\vec{B} = \myvec{6\\10\\-8}$.\\
-Let $\vec{P}$ represents points lying on the YZ plane. Since \myvec{1\\0\\0} is the normal vector to the plane and the origin($\vec{O}$) lies on the YZ plane, vector equation of YZ plane is
-\begin{align}
-    &\myvec{1 & 0 & 0}(\vec{P}-\vec{O})=0\\
-    &\implies \myvec{1 & 0 & 0}\vec{P}=0 \label{eq-1}
-\end{align}
+% Let $\vec{P}$ represents points lying on the YZ plane. Since \myvec{1\\0\\0} is the normal vector to the plane and the origin($\vec{O}$) lies on the YZ plane, vector equation of YZ plane is
+% \begin{align}
+%     &\myvec{1 & 0 & 0}(\vec{P}-\vec{O})=0\\
+%     &\implies \myvec{1 & 0 & 0}\vec{P}=0 \label{eq-1}
+% \end{align}
+Let $\vec{P}$ be the intersecting point of line $\vec{AB}$ and the YZ plane.
 Let the ratio in which $\vec{P}$ divides $\vec{AB}$ be $k:1$.\\
 Then,
 \begin{align}
-    \vec{P}-\vec{A} = k(\vec{B}-\vec{P})
+    \vec{P}-\vec{A} = k(\vec{B}-\vec{P})\\
+    \vec{P}=\dfrac{\vec{A}+k\vec{B}}{k+1}
 \end{align}
-Multiplying with vector $\myvec{1 & 0 & 0}$ both sides,
+Vector equation of YZ plane with normal vector $n$ and perpendicular distance from origin $d$ is
 \begin{align}
-    \myvec{1 & 0 & 0}\vec{P}-&\myvec{1 & 0 & 0}\vec{A}=\nonumber \\
-    &k\myvec{1 & 0 & 0}\vec{B}-k\myvec{1 & 0 & 0}\vec{P}
+    n^\top\vec{X}=d
 \end{align}
-Using \eqref{eq-1}
+Since $\vec{P}$ lies on YZ plane,
 \begin{align}
-    0-\myvec{1 & 0 & 0}\vec{A}&=k\myvec{1 & 0 & 0}\vec{B}-0\\
-    \implies -\myvec{1 & 0 & 0}\myvec{4\\8\\10}&=k\myvec{1 & 0 & 0}\myvec{6\\10\\-8}
+    &n^\top\vec{P}=d\\
+    \implies &n^\top\left(\dfrac{\vec{A}+k\vec{B}}{k+1}\right)=d\\
+    \implies &n^\top\vec{A}+kn^\top\vec{B}=d(k+1)
+\end{align}
+For YZ plane, $n=\myvec{1\\0\\0}$ and $d=0$. So,
+\begin{align}
+    &\myvec{1 & 0 & 0}\vec{A}+k\myvec{1 & 0 & 0}\vec{B}=0\\
+    \implies &\myvec{1 & 0 & 0}\myvec{4\\8\\10}+k\myvec{1 & 0 & 0}\myvec{6\\10\\-8}=0
 \end{align}
 \begin{align}
-    \implies& -4 = 6k\\
-    \implies& k = -2/3 
+    \implies &4 + 6k = 0\\
+    \implies &k = -2/3 
 \end{align}
 So, YZ plane divides line segment $\vec{AB}$ externally in the ratio 2:3.
 
