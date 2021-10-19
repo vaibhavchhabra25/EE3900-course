@@ -139,7 +139,7 @@ Download all python codes from
     https://github.com/vaibhavchhabra25/EE3900-course/blob/main/QUIZ-1/codes
 \end{lstlisting}
 \section{Problem}
-(2.28 (a)) Determine if signal $x[n]=\exp{j(2 \pi n/5)}$ is periodic. If so, find the period.
+(2.28 (a)) Determine if signal $x[n]=e^{j(2 \pi n/5)}$ is periodic. If so, find the period.
 \section{Solution}
 A signal $x[n]$ is periodic if for some integer $N$,
 \begin{align}
@@ -148,12 +148,12 @@ A signal $x[n]$ is periodic if for some integer $N$,
 And then, the period of the signal is $N$.
 Given,
 \begin{align}
-    x[n]=\exp{j(2 \pi n/5)}
+    x[n]=e^{j(2 \pi n/5)}
 \end{align}
 For this to be periodic,
 \begin{align}
-    &\exp{j(2\pi n/5)}=\exp{j(2\pi (n+N)/5)}\\
-    \implies &\exp{j(2 \pi n/5)}=\exp{j(2\pi n/5 + 2\pi N/5)}
+    &e^{j(2\pi n/5)}=e^{j(2\pi (n+N)/5)}\\
+    \implies &e^{j(2 \pi n/5)}=e^{j(2\pi n/5 + 2\pi N/5)}
 \end{align}
 $N/5$ must be an integer so that the equality holds. So, for an integer $k$,
 \begin{align}
@@ -165,6 +165,6 @@ So, the period of the signal is $N=5$.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\columnwidth]{figure.png}
-    \caption{ Plot for $x[n] = \exp{j(2\pi n/5)}$ }
+    \caption{ Plot for $x[n] = e^{j(2\pi n/5)}$ }
 \end{figure}
 \end{document}
